@@ -11,11 +11,15 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Test Heading
+            Your Total Database Management Solution
           </Heading>
 
           <Text as="p" variant="heroSecondary">
-            Test Secondary Text
+            As a leader in database management for over 40 years, we have the
+            expertise to securely manage your collection for the long term.
+            Whether you have archival, museum, or library holdings, or a
+            combinations of all 3, we have a solution that will work for your
+            unique needs.
           </Text>
           <Button variant="primary">Explore</Button>
         </Box>

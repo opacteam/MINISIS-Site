@@ -49,7 +49,7 @@ export default function KeyFeature() {
   return (
     <section sx={{ variant: "section.keyFeature" }} id="features">
       <Container>
-        <SectionHeader slogan="Test Slogan" title="Test Title"></SectionHeader>
+        <SectionHeader slogan="Our Features" title="Test Title"></SectionHeader>
         <Grid sx={styles.grid}>
           {data.map(item => (
             <FeatureCardColumn

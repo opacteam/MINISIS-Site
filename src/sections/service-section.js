@@ -23,23 +23,39 @@ import Secure from "assets/services/secure.svg";
 
 const data = {
   subTitle: "our services",
-  title: "Business Goals Achieved with Design",
+  title: "We provides a wide range of services with the latest developments",
   features: [
     {
       id: 1,
       imgSrc: Smart,
-      altText: "Smart Features",
-      title: "Smart Features",
+      altText: "Systems Development",
+      title: "Systems Development",
       text:
-        "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests."
+        "MINISIS Inc. can analyze, design, and develop any application from scratch to service your business requirements."
     },
     {
       id: 2,
       imgSrc: Secure,
-      altText: "Secure Contents",
-      title: "Secure Contents",
+      altText: "Web Enabling and Web Hosting",
+      title: "Web Enabling and Web Hosting",
       text:
-        "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests."
+        "MINISIS Inc. is able to take care of your website design and online access to the databases."
+    },
+    {
+      id: 3,
+      imgSrc: Secure,
+      altText: "Training",
+      title: "Training",
+      text:
+        "MINISIS Inc. provides complete training services for all of our applications."
+    },
+    {
+      id: 4,
+      imgSrc: Secure,
+      altText: "Technical Support & Maintenance (TS&M)",
+      title: "Technical Support & Maintenance (TS&M)",
+      text:
+        "MINISIS Inc. provides support to all aspects and components of the MINISIS Software Suite. 21 hours a day"
     }
   ]
 };
@@ -96,7 +112,7 @@ export default function ServiceSection() {
       <ModalVideo
         channel="youtube"
         isOpen={videoOpen}
-        videoId="iGBERMGMIvc"
+        videoId="SM0vrz0FS9M"
         onClose={_ => setVideoOpen(false)}
       ></ModalVideo>
     </section>

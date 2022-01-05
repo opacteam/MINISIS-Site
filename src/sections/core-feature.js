@@ -2,14 +2,14 @@
 import { jsx, Container, Box, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 
-import FeatureThumb from 'assets/core-feature.png';
+import FeatureThumb from 'assets/core-feature.svg';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'Core features',
-  title: 'Smart Jackpots that you may love this anytime & anywhere',
+  subTitle: 'Core product',
+  title: 'Standard MINISIS Application',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
+    'The SMA software toolkit was designed to avoid the need for programmers and coding experts. Our philosophy is that clients know their business and processes, and need to be able to use the tools themselves. ',
   btnName: 'Get Started',
   btnURL: '#',
 };
