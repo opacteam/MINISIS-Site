@@ -75,7 +75,7 @@ export default function ServiceSection() {
           <Button
             sx={styles.videoBtn}
             onClick={handleClick}
-            aria-lable="Play Button"
+            aria-label="Play Button"
           >
             <span>
               <IoIosPlay />

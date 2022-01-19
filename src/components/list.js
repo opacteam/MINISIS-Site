@@ -19,10 +19,9 @@ export default function List({ items = [], parentStyle, childStyle }) {
           sx={{ ...childStyle }}
           key={i}
         >
-          <IconButton sx={StyleSheet.listIcon} aria-label="list icon">
+          <IconButton sx={styles.listIcon} aria-label="list icon">
             {item.icon}
           </IconButton>
-
           {item.text}
         </Flex>
       ))}

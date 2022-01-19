@@ -1,11 +1,13 @@
 /** @jsx jsx */
-import { jsx, Box, Heading, Text, Button, Link } from "theme-ui";
+import { jsx, Box, Heading, Text, Button, Link, Image } from "theme-ui";
 
 export default function TextFeature({
   subTitle,
   title,
   description,
   btnName,
+  src,
+  altText,
   btnURL = "#"
 }) {
   return (
@@ -14,8 +16,9 @@ export default function TextFeature({
         <Text as="p" sx={styles.wrapper.subTitle}>
           {subTitle}
         </Text>
+       
         <Heading as="h2" sx={styles.wrapper.title}>
-          {title}
+      {title}
         </Heading>
       </Box>
 
@@ -27,7 +30,7 @@ export default function TextFeature({
 
       {btnName && (
         <Link href={btnURL} variant="default">
-          <Button variant="primary" aria-lable={btnName}>
+          <Button variant="primary" aria-label={btnName}>
             {btnName}
           </Button>
         </Link>
@@ -45,6 +48,13 @@ const styles = {
     a: {
       m: ["0 auto", null, null, 0]
     }
+  },
+  img: {
+    width: ["40px", null, null, "50px", "60px", "auto"],
+    height: "auto",
+    flexShrink: 0,
+    mr: [4, 4, null, null, 4, 5],
+    ml: -2
   },
   wrapper: {
     width: "100%",

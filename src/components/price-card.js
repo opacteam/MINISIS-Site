@@ -29,17 +29,17 @@ export default function PriceCard({
           <Text as="p">{description}</Text>
         </Box>
 
-        <List item={points} childStyle={styles.listItem} />
-
+        <List items={points} childStyle={styles.listItem} />
+{/* 
         <Text className="package__price" sx={styles.priceWithUnit}>
           {priceWithUnit}
           <span>/Monthly</span>
-        </Text>
+        </Text> */}
         <Box sx={styles.buttonGroup}>
-          <Button variant="primary" aria-lable={buttonText}>
+          <Button variant="primary" aria-label={buttonText}>
             {buttonText}
           </Button>
-          {anotherOption && (
+          {/* {anotherOption && (
             <Button
               variant="textButton"
               childName="free__trial"
@@ -48,7 +48,7 @@ export default function PriceCard({
             >
               {anotherOption}
             </Button>
-          )}
+          )} */}
         </Box>
       </Box>
     </Card>

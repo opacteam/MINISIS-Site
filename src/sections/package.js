@@ -12,67 +12,67 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: "Free Plan",
-      description: "For Small teams or office",
-      buttonText: "Start free trail",
+      name: "BASIC Support Option",
+      description: "The Support services program includes:",
+      buttonText: "Learn More",
       priceWithUnit: "$0",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
+          text: "Direct access to help center consultants",
           isAvailable: true
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: "Free software updates to MINISIS",
           isAvailable: true
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
+          text: "Guaranteed response to any issue between immediate to 24 business hours",
           isAvailable: true
         },
         {
           id: 4,
-          icon: <IoIosCloseCircle />,
-          text: "eCommerce Store ",
+          icon: <IoIosCheckmarkCircle />,
+          text: "Maximum of: 48 hours of support per year",
           isAvailable: true
         }
       ]
     },
     {
       id: 2,
-      name: "Business king",
-      description: "For Enterprise business",
+      name: "PREMIUM Support Option",
+      description: "The Support services program includes:",
       priceWithUnit: "$15",
-      buttonText: "Create account",
+      buttonText: "Learn More",
       anotherOption: "Or Start 14 Days trail",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
+          text: "Direct access to help center consultants",
           isAvailable: true
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: "Free software updates to MINISIS",
           isAvailable: true
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
+          text: "Guaranteed response to any issue between immediate to 8 business hours",
           isAvailable: true
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store ",
+          text: "Maximum of: 96 hours of support per year",
           isAvailable: true
         }
       ]
@@ -81,34 +81,34 @@ const packages = {
       id: 3,
       header: "Suggested",
       headerIcon: <IoIosCheckmarkCircle />,
-      name: "Pro Master",
-      description: "For pro level developers",
+      name: "VIP Support Option",
+      description: "The Support services program includes:",
       priceWithUnit: "$24",
-      buttonText: "Create account",
+      buttonText: "Learn More",
       anotherOption: "Or Start 14 Days trail",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
+          text: "Direct access to help center consultants",
           isAvailable: true
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: "Free software updates to MINISIS",
           isAvailable: true
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
+          text: "Guaranteed response to any issue between immediate to 3 business hours",
           isAvailable: true
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store ",
+          text: "Maximum of: 144 hours of support per year",
           isAvailable: true
         }
       ]
@@ -247,7 +247,7 @@ export default function Package() {
   });
 
   const handlePricingPlan = plan => {
-    if (plan === "anual") {
+    if (plan === "annual") {
       setState({
         active: "annual",
         pricingPlan: annual
@@ -285,39 +285,41 @@ export default function Package() {
   return (
     <section id="pricing" sx={{ variant: "section.pricing" }}>
       <Container>
-        <SectionHeader slogan="Pricing Plan" title="Choose ur plan">
-          <Flex sx={styles.buttonGroup}>
-            <Box sx={styles.buttonGroupInner}>
-              <button
-                className={state.active === "monthly" ? "active" : ""}
-                type="button"
-                aria-label="Monthly"
-                onClick={_ => handlePricingPlan("monthly")}
-              >
-                Monthly Plan
-              </button>
+        <SectionHeader
+          slogan="Technical Support &amp; Maintenance"
+          title="Choose your support level"
+        />
+        {/* <Flex sx={styles.buttonGroup}>
+          <Box sx={styles.buttonGroupInner}>
+            <button
+              className={state.active === "monthly" ? "active" : ""}
+              type="button"
+              aria-label="Monthly"
+              onClick={_ => handlePricingPlan("monthly")}
+            >
+              Monthly Plan
+            </button>
 
-              <button
-                className={state.active === "monthly" ? "active" : ""}
-                type="button"
-                aria-label="Monthly"
-                onClick={_ => handlePricingPlan("annual")}
-              >
-                Annual Plan
-              </button>
-            </Box>
-          </Flex>
-
-          <Box sx={styles.pricingWrapper} className="pricing__wrapper">
-            <Carousel {...sliderParams}>
-              {state.pricingPlan.map(packageData => (
-                <Box sx={styles.pricingItem} key={packageData.id}>
-                  <PriceCard header="test" name="test" />
-                </Box>
-              ))}
-            </Carousel>
+            <button
+              className={state.active === "annual" ? "active" : ""}
+              type="button"
+              aria-label="Annual"
+              onClick={_ => handlePricingPlan("annual")}
+            >
+              Annual Plan
+            </button>
           </Box>
-        </SectionHeader>
+        </Flex> */}
+
+        <Box sx={styles.pricingWrapper} className="pricing__wrapper">
+          <Carousel {...sliderParams}>
+            {state.pricingPlan.map(packageData => (
+              <Box sx={styles.pricingItem} key={packageData.id}>
+                <PriceCard header="test" name="test" data={packageData} />
+              </Box>
+            ))}
+          </Carousel>
+        </Box>
       </Container>
     </section>
   );
