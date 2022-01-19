@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 2809",
     "build": "next build && next export",
     "postbuild": "next-sitemap",
-    "start":"next start"
+    "start":"next start -p 2809"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
