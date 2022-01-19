@@ -4,7 +4,7 @@ import TextFeature from "components/text-feature";
 
 import FeatureThumb from "assets/core-feature.svg";
 import shapePattern from "assets/shape-pattern2.png";
-import SMA from "assets/SMA.png";
+import SMA from "assets/sma.png";
 
 const data = {
   subTitle: "Core product",
